@@ -1,0 +1,13 @@
+{ pkgs, inputs, ... }:
+{
+  # install package
+  environment.systemPackages = with pkgs; [
+    inputs.noctalia.packages.${system}.default
+    alacritty
+    kitty
+    git
+    curl
+    fish
+    neovim
+  ];
+}
