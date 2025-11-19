@@ -46,20 +46,14 @@ layout {
     
     focus-ring {
         width 1
-        active-color "#b4befe" // Lavender accent
-        inactive-color "#45475a" // Gray
-
-        // Gradient effect
-        active-gradient from="#b4befe" to="#89b4fa" angle=45 relative-to="workspace-view"
+        active-gradient from="#c77dff" to="#4cc9f0" angle=45 relative-to="workspace-view"
+        inactive-color "#45475a"
     }
-    
+
     border {
         width 1.5
-        active-color "#b4befe" // Lavender
-        inactive-color "#45475a" // Gray
-        
-        // Gradient for active border
-        active-gradient from="#b4befe" to="#89b4fa" angle=45 relative-to="workspace-view"
+        active-gradient from="#c77dff" to="#4cc9f0" angle=45 relative-to="workspace-view"
+        inactive-color "#45475a"
     }
     
     struts {
