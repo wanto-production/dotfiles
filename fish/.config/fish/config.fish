@@ -35,6 +35,19 @@ if status is-interactive
         set -gx PATH "$(asdf where php)/.composer/vendor/bin" $PATH
     end
 
+    function toggle_screen_timeout
+        # Cek apakah service sedang aktif (running)
+        if systemctl --user is-active --quiet swayidle-niri.service
+            # Jika aktif, matikan
+            systemctl --user stop swayidle-niri.service
+            echo "Screen timeout disabled"
+        else
+            # Jika tidak aktif, nyalakan
+            systemctl --user start swayidle-niri.service
+            echo "Screen timeout enabled"
+        end
+    end
+
     # For jumping between prompts in foot terminal
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
